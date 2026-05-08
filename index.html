@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>دليل فعاليات الجامعة الافتراضية</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <header>
+        <img class="logo1" src="img/logo.png" alt="logo" />
+        <h1>دليل فعاليات الجامعة الإفتراضية السورية</h1>
+        <p class="headr">الصفحة الرئيسية</p>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="events.html">الفعاليات</a></li>
+            <li><a href="event.html">تفاصيل الفعاليات</a></li>
+            <li><a href="about.html">الدليل</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </header>
+    <main>
+        <h2> ابرز الفعاليات :</h2>
+    <div class="main-content">
+        <div class="card-dac1">
+            <img src="img/مسابقة المحتوى الرقمي العربي.jpg" alt="مسابقة المحتوى الرقمي العربي" />
+            <h3>مسابقة المحتوى الرقمي العربي</h3>
+            <p>تعد مسابقة المحتوى الرقمي مبادرة رائدة من الجامعة الافتراضية السورية لإغناء الشبكة العالمية تقنياً</p>
+            <p>تهدف لدعم المبدعين في مجالات البرمجة والتصميم، وتعزيز المصادر العربية الموثوقة،</p>
+            <p>مما يمنحك فرصة ذهبية لترك بصمة تقنية ودعم سيرتك الذاتية</p>
+        </div>
+        <div class="card-scpc1">
+            <img src="img/المسابقة البرمجية للجامعات.jpg" alt="المسابقة البرمجية للجامعات" />
+            <h3>المسابقة البرمجية للجامعات</h3>
+            <p>SCPC: الفعالية البرمجية الأضخم في سوريا. تجمع نخبة العقول من كافة الجامعات للمنافسة على حل المشكلات البرمجية المعقدة</p>
+            <p>وهي محطة مصيرية لإثبات الكفاءة أمام كبرى شركات التكنولوجيا</p>
+            <p>وبوابتك الوحيدة لتمثيل سوريا في أجواء تنافسية فريدة تميزها لوحات المتصدرين والبالونات الملونة</p>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="more">تصنيفات سريعة:</h2>
+    </div>
+    
+    <!-- أزرار التصنيفات السريعة -->
+    <div class="d-flex justify-content-center gap-3">
+        <span class="badge rounded-pill bg-secondary px-3 py-2" style="cursor:pointer" onclick="filterByBadge('')">الكل</span>
+        <span class="badge rounded-pill bg-primary px-3 py-2" style="cursor:pointer" onclick="filterByBadge('مسابقات')">مسابقات</span>
+        <span class="badge rounded-pill bg-success px-3 py-2" style="cursor:pointer" onclick="filterByBadge('مبادرات')">مبادرات</span>
+        <span class="badge rounded-pill bg-danger px-3 py-2" style="cursor:pointer" onclick="filterByBadge('برامج تدريبية')">برامج تدريبية</span>
+        <span class="badge rounded-pill bg-warning text-dark px-3 py-2" style="cursor:pointer" onclick="filterByBadge('إدارة مشاريع')">إدارة مشاريع</span>
+    </div>
+
+    <h2>أحدث الفعاليات:</h2>
+    <div class="sec-container" id="eventsContainer">
+        
+        <!-- مسابقة المحتوى الرقمي -->
+        <div class="event-card card-dac" data-category="مسابقات">
+            <img src="img/مسابقة المحتوى الرقمي العربي.jpg" alt="مسابقة المحتوى الرقمي العربي" />
+            <h3>مسابقة المحتوى الرقمي العربي</h3>
+            <p>تعد مسابقة المحتوى الرقمي مبادرة رائدة من الجامعة الافتراضية السورية لإغناء الشبكة العالمية تقنياً.</p>
+            <p>تهدف لدعم المبدعين في مجالات البرمجة والتصميم، وتعزيز المصادر العربية الموثوقة.</p>
+            <p>مما يمنحك فرصة ذهبية لترك بصمة تقنية ودعم سيرتك الذاتية كمهندس مستقبلي.</p>
+        </div> 
+
+        <!-- مسابقة الذكاء الاصطناعي -->
+        <div class="event-card card-ai-hackathon" data-category="مسابقات">
+            <img src="img/aihackathon.png" alt="مسابقة الذكاء الاصطناعي" />
+            <h3>مسابقة الذكاء الاصطناعي السوري</h3>
+            <p>منصة فريدة لتمكين المبتكرين من بناء حلول ذكية تواكب الثورة التقنية العالمية.</p>
+            <p>تهدف لدعم نماذج تعلم الآلة ومعالجة اللغات الطبيعية وتوظيفها في خدمة المجتمع.</p>
+            <p>فرصة لبناء حلول مستقبلية تعتمد على أحدث تقنيات الـ AI.</p>
+        </div>
+
+        <!-- المسابقة البرمجية -->
+        <div class="event-card card-scpc" data-category="مسابقات">
+            <img src="img/المسابقة البرمجية للجامعات.jpg" alt="المسابقة البرمجية للجامعات" />
+            <h3>المسابقة البرمجية للجامعات</h3>
+            <p>SCPC: الفعالية البرمجية الأضخم في سوريا، تجمع نخبة العقول لحل المشكلات المعقدة.</p>
+            <p>بوابتك لتمثيل سوريا عالمياً في أجواء تنافسية تميزها لوحات المتصدرين والبالونات الملونة.</p>
+        </div>
+
+        <!-- مبادرة تمكين -->
+        <div class="event-card card-tamkeen" data-category="مبادرات">
+            <img src="img/tamkeen.jpg" alt="مبادرة تمكين" />
+            <h3>مبادرة تمكين لتأهيل الخريجين</h3>
+            <p>جسر يربط بين التحصيل الأكاديمي ومتطلبات سوق العمل البرمجي والهندسي.</p>
+            <p>تزود الخريجين بمهارات التواصل، كتابة السير الذاتية، وإدارة المقابلات الوظيفية.</p>
+        </div> 
+
+        <!-- مبادرة ضوء -->
+        <div class="event-card card-daw" data-category="مبادرات">
+            <img src="img/مبادرة ضوء.jpg" alt="مبادرة ضوء" />
+            <h3>مبادرة ضوء لدعم المكفوفين</h3>
+            <p>تجربة تطوعية رائدة لتمكين الأشخاص ذوي الإعاقة البصرية من فرص تعليمية عادلة.</p>
+            <p>تعمل على تحويل المناهج الجامعية إلى محتوى صوتي عالي الجودة وتهيئته للطباعة.</p>
+        </div>
+
+        <!-- برنامج KPT -->
+        <div class="event-card card-kpt" data-category="برامج تدريبية">
+            <img src="img/برنامج التدريب البرمجي للأطفال واليافعين KPT.jpg" alt="برنامج KPT" />
+            <h3>برنامج KPT لتدريب الأطفال</h3>
+            <p>خطوة لنقل المعرفة التقنية للأجيال الناشئة عبر تبسيط مفاهيم البرمجة المعقدة.</p>
+            <p>يمنح الطلاب فرصة استكشاف الروبوتيك وبناء مشاريعهم الخاصة بإشراف مختصين.</p>
+        </div>
+
+        <!-- الأمن السيبراني -->
+        <div class="event-card card-c-s-w" data-category="برامج تدريبية">
+            <img src="img/c-s-w.jpg" alt="ورشة الأمن السيبراني" />
+            <h3>دورة حماية البيانات والأمن السيبراني</h3>
+            <p>برنامج مكثف لتعليم حماية الشبكات، اكتشاف الثغرات، والتصدي للهجمات الإلكترونية.</p>
+            <p>تدريب عملي على بناء الجدران النارية وتأمين السيرفرات الشخصية والمؤسساتية.</p>
+        </div>
+
+        <!-- إدارة المشاريع -->
+        <div class="event-card card-project-management" data-category="إدارة مشاريع">
+            <img src="img/ادارة المشاريع.jpg" alt="إدارة المشاريع" />
+            <h3>ورشة القيادة وإدارة المشاريع (Agile)</h3>
+            <p>تزويد المهندسين بمهارات إدارة المشاريع المعقدة وتحويل الأفكار لمهام قابلة للتنفيذ.</p>
+            <p>تدريب على إدارة المخاطر، الجدولة الزمنية، وموازنة الموارد البشرية والمادية.</p>
+        </div>
+    </div>
+    </main> 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p class="student-ids">
+                    إعداد⇦
+                    حمزة الموسى الجاسم (ID: 123456) |
+                    أحمد (ID: 654321) |
+                    خالد (ID: 987654)
+                </p>
+            </div>
+            <div class="footer-section">
+                <h5>تواصل معنا</h5>
+                <p>gmail: royaprog@gmail.com</p>
+                <p>phone: +963985989900</p>
+            </div>
+            <div class="footer-section social-links">
+                <h5>تابعنا على</h5>
+                <br>
+                <a href="https://www.facebook.com/h.za26" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/h.za26/" target="_blank">Instagram</a>
+            </div>
+            <p>جميع الحقوق محفوظة لدى فريق <strong>رؤية برمجية</strong> &copy; 2026</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
