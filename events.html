@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>دليل فعاليات الجامعة الافتراضية</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
+    <header>
+        <h1>دليل فعاليات الجامعة الإفتراضية السورية</h1>
+        <p class="headr"> الفعاليات</p>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="events.html">الفعاليات</a></li>
+            <li><a href="event.html">تفاصيل الفعاليات</a></li>
+            <li><a href="about.html">الدليل</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </header>
+    <main>
+    <!-- شريط أدوات البحث والفلترة -->
+    <div class="container my-4">
+        <div class="row g-3 bg-light p-3 rounded shadow-sm">
+            <div class="col-md-3">
+                <input type="text" id="searchName" class="form-control" placeholder="بحث بالاسم..." onkeyup="filterEvents()">
+            </div>
+            <div class="col-md-3">
+                <select id="filterCategory" class="form-select" onchange="filterEvents()">
+                    <option value="">كل التصنيفات</option>
+                    <option value="مسابقات">مسابقات</option>
+                    <option value="مبادرة">مبادرة</option>
+                    <option value="برامج تدريبية">برامج تدريبية</option>
+                    <option value="إدارة المشاريع">إدارة المشاريع</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="filterLocation" class="form-select" onchange="filterEvents()">
+                    <option value="">كل المواقع</option>
+                    <option value="دمشق">دمشق</option>
+                    <option value="حلب">حلب</option>
+                    <option value="مراكز نفاذ">مراكز نفاذ</option>
+                    <option value="عن بُعد">عن بُعد</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <input type="date" id="filterDate" class="form-control" onchange="filterEvents()">
+            </div>
+        </div>
+    </div>
+
+    <!-- حاوية البطاقات -->
+    <div class="sec2-container" id="eventsContainer">
+        <!-- مسابقة المحتوى الرقمي -->
+        <div class="event-card card-dac" data-category="مسابقات" data-location="مراكز نفاذ" data-date="2026-07-15">
+            <img src="img/مسابقة المحتوى الرقمي العربي.jpg" alt="مسابقة المحتوى الرقمي العربي" />
+            <h3>مسابقة المحتوى الرقمي العربي</h3>
+            <p>المكان : مراكز نفاذ الجامعة الافتراضية / معهد HIAST</p>
+            <p>التاريخ: 15 تموز 2026</p>
+            <p>التصنيف :مسابقات</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div> 
+
+        <!-- مسابقة الذكاء الاصطناعي -->
+        <div class="event-card card-ai-hackathon" data-category="مسابقات" data-location="مراكز نفاذ" data-date="2027-02-20">
+            <img src="img/aihackathon.png" alt="مسابقة الذكاء الاصطناعي" />
+            <h3>مسابقة الذكاء الاصطناعي السوري</h3>
+            <p>المكان : مراكز نفاذ الجامعة الافتراضية </p>
+            <p>التاريخ: 20 شباط 2027</p>
+            <p>التصنيف :مسابقات</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div>
+
+        <!-- المسابقة البرمجية SCPC -->
+        <div class="event-card card-scpc" data-category="مسابقات" data-location="دمشق" data-date="2026-07-15">
+            <img src="img/المسابقة البرمجية للجامعات.jpg" alt="المسابقة البرمجية للجامعات" />
+            <h3>المسابقة البرمجية للجامعات</h3>
+            <p>المكان: دمشق - المعهد العالي للعلوم التطبيقية</p>
+            <p>التاريخ: 15 يوليو 2026</p>
+            <p>التصنيف :مسابقات</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div>
+
+        <!-- مبادرة تمكين -->
+        <div class="event-card card-tamkeen" data-category="مبادرة" data-location="حلب" data-date="2026-11-05">
+            <img src="img/tamkeen.jpg" alt="مبادرة تمكين للخريجين (Tamkeen)" />
+            <h3>مبادرة تمكين لتأهيل الخريجين</h3>
+            <p>المكان: حلب-جامعة حلب</p>
+            <p>التاريخ: 5 تشرين الثاني 2026</p>
+            <p>التصنيف :مبادرة</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div> 
+
+        <!-- مبادرة ضوء -->
+        <div class="event-card card-daw" data-category="مبادرة" data-location="دمشق" data-date="">
+            <img src="img/مبادرة ضوء.jpg" alt="مبادرة ضوء" />
+            <h3>مبادرة ضوء لدعم المكفوفين</h3>
+            <p>التصنيف :مبادرة</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div>
+
+        <!-- برنامج KPT -->
+        <div class="event-card card-kpt" data-category="برامج تدريبية" data-location="مراكز نفاذ" data-date="2026-06-25">
+            <img src="img/برنامج التدريب البرمجي للأطفال واليافعين KPT.jpg" alt="برنامج KPT" />
+            <h3>برنامج KPT لتدريب الأطفال</h3>
+            <p>المكان: مراكز نفاذ الجامعة الافتراضية</p>
+            <p>التاريخ: 25 حزيران 2026</p>
+            <p>التصنيف: برامج تدريبية</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div>
+
+        <!-- الأمن السيبراني -->
+        <div class="event-card card-c-s-w" data-category="برامج تدريبية" data-location="عن بُعد" data-date="2027-10-21">
+            <img src="img/c-s-w.jpg" alt="ورشة الأمن السيبراني" />
+            <h3>دورة حماية البيانات والأمن السيبراني</h3>
+            <p>المكان : التعلم عن بُعد</p>
+            <p>التاريخ: 21 تشرين الأول 2027</p>
+            <p>التصنيف: برامج تدريبية</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div>
+
+        <!-- إدارة المشاريع -->
+        <div class="event-card card-project-management" data-category="إدارة المشاريع" data-location="دمشق" data-date="2027-09-21">
+            <img src="img/ادارة المشاريع.jpg" alt="إدارة المشاريع" />
+            <h3>ورشة القيادة وإدارة المشاريع (Agile)</h3>
+            <p>المكان: مركز التدريب المستمر - دمشق</p>
+            <p>التاريخ: 21 تشرين أيلول 2027</p>
+            <p>التصنيف: إدارة المشاريع</p>
+            <a href="event.html">المزيد من التفاصيل</a>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-container"> 
+            <div class="footer-section"> 
+                <h5>تواصل معنا</h5> 
+                <p>gmail: royaprog@gmail.com</p>
+                <p>phone: +963985989900</p> 
+            </div> 
+            <div class="footer-section social-links">
+                <h5>تابعنا على</h5>
+                <br>
+                <a href="https://www.facebook.com/h.za26" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/h.za26/" target="_blank">Instagram</a>
+            </div>
+            <p>جميع الحقوق محفوظة لدى فريق <strong>رؤية برمجية</strong> &copy; 2026</p>
+        </div>
+
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
